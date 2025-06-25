@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Comparison Table</title>
+    <style>
+      table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          overflow: hidden;
+          border-radius: 10px;
+          background-color: #fff;
+      }
+
+      th {
+          background-color: #2c3e50;
+          color: white;
+          padding: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 1px;
+          position: sticky;
+          top: 0;
+          z-index: 2;
+      }
+
+      td {
+          padding: 15px;
+          background-color: #fdfdfd;
+          border-bottom: 1px solid #eee;
+          vertical-align: middle;
+      }
+
+      tr:hover td {
+          background-color: #f1f5ff;
+          transition: background-color 0.3s ease;
+      }
+
+      audio {
+          width: 160px;
+          margin-top: 8px;
+      }
+
+      img {
+          max-width: 90%;
+          height: auto;
+          border: 2px solid #ddd;
+          border-radius: 5px;
+          transition: transform 0.2s ease;
+      }
+
+      img:hover {
+          transform: scale(1.03);
+          border-color: #5a8dee;
+      }
+    </style>
+</head>
+<body>
+
+<h1>Score Follower Comparison Examples</h1>
+
+
+<p>
+    The following examples showcase the performance of different score followers.
+    Each row corresponds to a performance (i.e., an audio file), where the beats have been <em>transferred</em> (i.e., the click sound) based on the alignment.
+    Note that this is not beat tracking per se—the score followers do not predict the beat locations. Instead, the beat annotations from the ground truth (in the leftmost column) are transferred using the predicted alignment.
+    Each plot shows the warping path, with the beat positions indicated by red dots.
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Ground Truth</th>
+            <th>OLTW Dixon</th>
+            <th>OLTW Arzt</th>
+            <th>HMM</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Chopin_op10_n03_p17_gt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Chopin_op10_n03_p17_dixon.png" alt="Dixon">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Chopin_op10_n03_p17_dixon.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Chopin_op10_n03_p17_arzt.png" alt="Arzt">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Chopin_op10_n03_p17_arzt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Chopin_op10_n03_p17_hmm.png" alt="HMM">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Chopin_op10_n03_p17_hmm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <!-- Add more rows like the one above for additional pieces -->
+        <tr>
+            <td>
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Fugue_bwv_858_VuV01M_gt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Fugue_bwv_858_VuV01M_dixon.png" alt="Dixon">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Fugue_bwv_858_VuV01M_dixon.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Fugue_bwv_858_VuV01M_arzt.png" alt="Arzt">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Fugue_bwv_858_VuV01M_arzt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Fugue_bwv_858_VuV01M_hmm.png" alt="HMM">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Fugue_bwv_858_VuV01M_hmm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <!-- <tr>
+            <td>
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Piano_Sonatas_16-1_Khmara05M_gt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Piano_Sonatas_16-1_Khmara05M_dixon.png" alt="Dixon">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Piano_Sonatas_16-1_Khmara05M_dixon.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Piano_Sonatas_16-1_Khmara05M_arzt.png" alt="Arzt">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Piano_Sonatas_16-1_Khmara05M_arzt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Piano_Sonatas_16-1_Khmara05M_hmm.png" alt="HMM">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Piano_Sonatas_16-1_Khmara05M_hmm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr> -->
+        <tr>
+            <td>
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Schumann_Toccata_DupreeF13M_gt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Schumann_Toccata_DupreeF13M_dixon.png" alt="Dixon">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Schumann_Toccata_DupreeF13M_dixon.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Schumann_Toccata_DupreeF13M_arzt.png" alt="Arzt">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Schumann_Toccata_DupreeF13M_arzt.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <img src="img/Schumann_Toccata_DupreeF13M_hmm.png" alt="HMM">
+                <audio controls controlsList="nodownload">
+                    <source src="audios/Schumann_Toccata_DupreeF13M_hmm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
