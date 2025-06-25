@@ -58,3 +58,8 @@ The following videos showcase score following for a live piano performance.
   <source src="https://raw.githubusercontent.com/anonymous-conference-submission/sfismk2831/main/videos/schumann_demo_blurred_small.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
+# LICENSE
+
+The contents of this website, including videos and audio materials are licensed under the CC BY-NC-SA 4.0 - see the [LICENSE](./LICENSE) file for details.
